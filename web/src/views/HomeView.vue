@@ -1,7 +1,7 @@
 <template>
   <a-layout>
     <a-layout-sider width="200" style="background: #fff">
-      <a-menu v-model:selectedKeys="selectedKeys2" v-model:openKeys="openKeys" mode="inline"
+      <a-menu mode="inline"
         :style="{ height: '100%', borderRight: 0 }">
         <a-sub-menu key="sub1">
           <template #title>
@@ -49,11 +49,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import axios from 'axios';
 
 export default defineComponent({
   name: 'HomeView',
-  components: {
-    // HelloWorld,
-  },
+  setup() {
+    // axios.get("http://localhost:8081/ebook/list?name=python").then(function (response) {
+    //   console.log(response);
+    // })
+    axios.get("http://localhost:8081/ebook/list?name=python").then((response) => {
+      console.log(response);
+    })
+  }
 });
 </script>
