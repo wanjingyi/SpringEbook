@@ -67,11 +67,13 @@
 import { defineComponent, onMounted, ref } from 'vue';
 import axios from 'axios';
 
-const listData: Record<string, string>[] = [];
+
 
 export default defineComponent({
   name: 'HomeView',
   setup() {
+    const listData: Record<string, string>[] = [];
+    
     console.log("setup")
     const ebooks = ref();
     onMounted(() => {
