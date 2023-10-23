@@ -1156,3 +1156,18 @@ Caused by: java.lang.ClassNotFoundException: com.wjy.ebook.service.EbookService
 	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
 	... 26 common frames omitted
+2023-10-23 14:30:25.713 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry' in your configuration.
+
