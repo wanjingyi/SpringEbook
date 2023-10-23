@@ -1,10 +1,49 @@
 <template>
     <a-layout>
         <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
-            <a-table :columns="columns" :data-source="ebooks" :pagination="pagination" :loading="loading"
+            <!-- <a-table :columns="columns" :data-source="ebooks" :pagination="pagination" :loading="loading"
                 @change="handleTableChange">
                 <template #bodyCell="{ column, text }">
                     <template v-if="column.dataIndex === 'name'">{{ text.first }} {{ text.last }}</template>
+                </template>
+            </a-table> -->
+            <a-table :columns="columns" :data-source="ebooks" :pagination="pagination" :loading="loading"
+                @change="handleTableChange">
+                <template #headerCell="{ column }">
+                    <template v-if="column.key === 'name'">
+                        <span>
+                            <smile-outlined />
+                            Name
+                        </span>
+                    </template>
+                </template>
+
+                <template #bodyCell="{ column, record }">
+                    <template v-if="column.key === 'name'">
+                        <a>
+                            {{ record.name }}
+                        </a>
+                    </template>
+                    <template v-else-if="column.key === 'tags'">
+                        <span>
+                            <a-tag v-for="tag in record.tags" :key="tag"
+                                :color="tag === 'loser' ? 'volcano' : tag.length > 5 ? 'geekblue' : 'green'">
+                                {{ tag.toUpperCase() }}
+                            </a-tag>
+                        </span>
+                    </template>
+                    <template v-else-if="column.key === 'action'">
+                        <span>
+                            <a>Invite 一 {{ record.name }}</a>
+                            <a-divider type="vertical" />
+                            <a>Delete</a>
+                            <a-divider type="vertical" />
+                            <a class="ant-dropdown-link">
+                                More actions
+                                <down-outlined />
+                            </a>
+                        </span>
+                    </template>
                 </template>
             </a-table>
         </a-layout-content>
@@ -20,9 +59,9 @@ export default defineComponent({
     setup() {
 
         const pagination = computed(() => ({
-            total:0,
+            total: 0,
             current: 1,
-            pageSize: 2
+            pageSize: 5
         }));
 
         const loading = ref(false);
