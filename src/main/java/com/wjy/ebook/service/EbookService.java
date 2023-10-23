@@ -1,5 +1,6 @@
 package com.wjy.ebook.service;
 
+import com.mysql.cj.util.StringUtils;
 import com.wjy.ebook.domain.Ebook;
 import com.wjy.ebook.domain.EbookExample;
 import com.wjy.ebook.mapper.EbookMapper;
@@ -9,6 +10,7 @@ import com.wjy.ebook.utils.CopyUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -23,7 +25,11 @@ public class EbookService {
     public List<EbookResp> list(EbookReq req) {
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
-        criteria.andNameLike("%" + req.getName() + "%");
+
+        if (!ObjectUtils.isEmpty(req.getName())) {
+            criteria.andNameLike("%" + req.getName() + "%");
+        }
+
         List<Ebook> ebookList = ebookMapper.selectByExample(ebookExample);
 
 //        List<EbookResp> respList = new ArrayList<>();

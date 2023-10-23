@@ -41,31 +41,21 @@
       </a-menu>
     </a-layout-sider>
     <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
-      <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="listData">
-        <template #footer>
-          <div>
-            <b>ant design vue</b>
-            footer part
-          </div>
-        </template>
+      <a-list item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }" :data-source="ebooks">
         <template #renderItem="{ item }">
-          <a-list-item key="item.title">
+          <a-list-item key="item.name">
             <template #actions>
               <span v-for="{ type, text } in actions" :key="type">
                 <component v-bind:is="type" style="margin-right: 8px" />
                 {{ text }}
               </span>
             </template>
-            <template #extra>
-              <img width="272" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
-            </template>
             <a-list-item-meta :description="item.description">
               <template #title>
-                <a :href="item.href">{{ item.title }}</a>
+                <a :href="item.href">{{ item.name }}</a>
               </template>
-              <template #avatar><a-avatar :src="item.avatar" /></template>
+              <template #avatar><a-avatar :src="item.cover" /></template>
             </a-list-item-meta>
-            {{ item.content }}
           </a-list-item>
         </template>
       </a-list>
@@ -97,22 +87,13 @@ export default defineComponent({
     console.log("setup")
     const ebooks = ref();
     onMounted(() => {
-      // axios.get("http://localhost:8081/ebook/list?name=python").then(function (response) {
-      //   console.log(response);
-      // })
-      axios.get("http://localhost:8081/ebook/list?name=python").then((response) => {
+      axios.get("http://localhost:8081/ebook/list").then((response) => {
         const data = response.data;
         ebooks.value = data.content
         console.log(response);
       });
     })
 
-    const pagination = {
-      onChange: (page: number) => {
-        console.log(page);
-      },
-      pageSize: 3,
-    };
     const actions: Record<string, string>[] = [
       { type: 'StarOutlined', text: '156' },
       { type: 'LikeOutlined', text: '156' },
@@ -122,9 +103,18 @@ export default defineComponent({
     return {
       ebooks,
       listData,
-      pagination,
       actions,
     }
   }
 });
 </script>
+
+<style scoped>
+.ant-avatar {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 8%;
+  margin: 5px 0;
+}
+</style>
