@@ -2629,3 +2629,122 @@ Consider defining a bean of type 'org.springframework.web.servlet.config.annotat
 2023-10-23 14:36:03.829 INFO  com.wjy.ebook.filter.LogFilter                    :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：4 ms -------------
 2023-10-23 14:37:01.348 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
 2023-10-23 14:37:01.353 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-10-23 14:37:04.083 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.5.Final
+2023-10-23 14:37:04.097 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 31544 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-10-23 14:37:04.097 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-10-23 14:37:04.123 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-23 14:37:04.123 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-23 14:37:04.459 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-10-23 14:37:04.460 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-10-23 14:37:04.471 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-10-23 14:37:04.816 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2023-10-23 14:37:04.821 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:37:04.822 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-10-23 14:37:04.822 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-10-23 14:37:05.070 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-10-23 14:37:05.070 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 947 ms
+2023-10-23 14:37:05.584 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-10-23 14:37:05.594 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:37:05.606 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2023-10-23 14:37:05.612 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 1.746 seconds (JVM running for 2.321)
+2023-10-23 14:37:05.613 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-10-23 14:37:05.613 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8081
+2023-10-23 14:37:13.259 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-23 14:37:13.259 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-10-23 14:37:13.260 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-10-23 14:37:13.263 INFO  com.wjy.ebook.filter.LogFilter                    :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2023-10-23 14:37:13.264 INFO  com.wjy.ebook.filter.LogFilter                    :26   [32m                  [0;39m 请求地址: http://localhost:8081/ebook/list GET
+2023-10-23 14:37:13.264 INFO  com.wjy.ebook.filter.LogFilter                    :27   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-23 14:37:13.270 INFO  com.wjy.ebook.interceptor.LogInterceptor          :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2023-10-23 14:37:13.270 INFO  com.wjy.ebook.interceptor.LogInterceptor          :24   [32m                  [0;39m 请求地址: http://localhost:8081/ebook/list GET
+2023-10-23 14:37:13.270 INFO  com.wjy.ebook.interceptor.LogInterceptor          :25   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-23 14:37:13.303 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2023-10-23 14:37:13.470 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2023-10-23 14:37:13.521 INFO  com.wjy.ebook.interceptor.LogInterceptor          :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：251 ms -------------
+2023-10-23 14:37:13.522 INFO  com.wjy.ebook.filter.LogFilter                    :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：258 ms -------------
+2023-10-23 14:38:41.545 INFO  com.wjy.ebook.filter.LogFilter                    :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2023-10-23 14:38:41.545 INFO  com.wjy.ebook.filter.LogFilter                    :26   [32m                  [0;39m 请求地址: http://localhost:8081/ebook/list GET
+2023-10-23 14:38:41.545 INFO  com.wjy.ebook.filter.LogFilter                    :27   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-23 14:38:41.545 INFO  com.wjy.ebook.interceptor.LogInterceptor          :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2023-10-23 14:38:41.546 INFO  com.wjy.ebook.interceptor.LogInterceptor          :24   [32m                  [0;39m 请求地址: http://localhost:8081/ebook/list GET
+2023-10-23 14:38:41.546 INFO  com.wjy.ebook.interceptor.LogInterceptor          :25   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-23 14:38:41.549 INFO  com.wjy.ebook.interceptor.LogInterceptor          :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：3 ms -------------
+2023-10-23 14:38:41.550 INFO  com.wjy.ebook.filter.LogFilter                    :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：5 ms -------------
+2023-10-23 14:42:37.054 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-10-23 14:42:37.058 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-10-23 14:42:40.074 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.5.Final
+2023-10-23 14:42:40.086 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 22296 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-10-23 14:42:40.086 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-10-23 14:42:40.117 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-23 14:42:40.117 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-23 14:42:40.473 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-10-23 14:42:40.474 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-10-23 14:42:40.486 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-10-23 14:42:40.958 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2023-10-23 14:42:40.963 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:42:40.964 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-10-23 14:42:40.964 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-10-23 14:42:41.206 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-10-23 14:42:41.207 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1090 ms
+2023-10-23 14:42:42.003 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-10-23 14:42:42.017 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:42:42.030 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2023-10-23 14:42:42.036 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 2.199 seconds (JVM running for 2.804)
+2023-10-23 14:42:42.039 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-10-23 14:42:42.039 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8081
+2023-10-23 14:43:48.539 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-23 14:43:48.540 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-10-23 14:43:48.540 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2023-10-23 14:43:48.547 INFO  com.wjy.ebook.filter.LogFilter                    :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2023-10-23 14:43:48.548 INFO  com.wjy.ebook.filter.LogFilter                    :26   [32m                  [0;39m 请求地址: http://127.0.0.1:8081/ebook/list GET
+2023-10-23 14:43:48.548 INFO  com.wjy.ebook.filter.LogFilter                    :27   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-23 14:43:48.569 INFO  com.wjy.ebook.interceptor.LogInterceptor          :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2023-10-23 14:43:48.570 INFO  com.wjy.ebook.interceptor.LogInterceptor          :24   [32m                  [0;39m 请求地址: http://127.0.0.1:8081/ebook/list GET
+2023-10-23 14:43:48.570 INFO  com.wjy.ebook.interceptor.LogInterceptor          :25   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-23 14:43:48.591 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m ------------- 开始 -------------
+2023-10-23 14:43:48.591 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 请求地址: http://127.0.0.1:8081/ebook/list GET
+2023-10-23 14:43:48.591 INFO  com.wjy.ebook.aspect.LogAspect                    :50   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-10-23 14:43:48.592 INFO  com.wjy.ebook.aspect.LogAspect                    :51   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-23 14:43:48.652 INFO  com.wjy.ebook.aspect.LogAspect                    :72   [32m                  [0;39m 请求参数: [{}]
+2023-10-23 14:43:48.688 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2023-10-23 14:43:48.955 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2023-10-23 14:43:48.996 INFO  com.wjy.ebook.aspect.LogAspect                    :84   [32m                  [0;39m 返回结果: {"content":[{"description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"success":true}
+2023-10-23 14:43:48.996 INFO  com.wjy.ebook.aspect.LogAspect                    :85   [32m                  [0;39m ------------- 结束 耗时：407 ms -------------
+2023-10-23 14:43:49.031 INFO  com.wjy.ebook.interceptor.LogInterceptor          :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：461 ms -------------
+2023-10-23 14:43:49.032 INFO  com.wjy.ebook.filter.LogFilter                    :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：484 ms -------------
+2023-10-23 14:47:03.250 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-23 14:47:03.256 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:47:03.256 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-10-23 14:47:03.257 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-23 14:47:03.259 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2023-10-23 14:47:03.259 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:47:03.260 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:47:03.269 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-10-23 14:47:03.274 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-10-23 14:47:03.329 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 22296 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-10-23 14:47:03.329 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-10-23 14:47:03.411 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-10-23 14:47:03.411 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-10-23 14:47:03.412 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-10-23 14:47:03.488 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2023-10-23 14:47:03.488 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:47:03.489 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-10-23 14:47:03.489 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-10-23 14:47:03.499 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-10-23 14:47:03.500 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 169 ms
+2023-10-23 14:47:03.743 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-10-23 14:47:03.748 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2023-10-23 14:47:03.750 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2023-10-23 14:47:03.751 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.442 seconds (JVM running for 264.52)
+2023-10-23 14:47:03.753 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-10-23 14:47:03.753 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-10-23 14:47:03.753 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8081
