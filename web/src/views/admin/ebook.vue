@@ -27,7 +27,7 @@
                         </span>
                     </template>
                     <template v-else-if="column.key === 'action'">
-                        <a-popconfirm  title="Sure to delete?">
+                        <a-popconfirm title="Sure to delete?">
                             <a>Delete</a>
                         </a-popconfirm>
                     </template>
@@ -46,9 +46,10 @@ export default defineComponent({
     setup() {
 
         const pagination = computed(() => ({
-            total: 0,
             current: 1,
-            pageSize: 5
+            pageSize: 5,
+            total: 8
+
         }));
 
         const loading = ref(false);
@@ -112,16 +113,23 @@ export default defineComponent({
         */
         const handleQuery = (params: any) => {
             // loading.value = true;
-            axios.get("/ebook/list", params).then((response) => {
+            axios.get("/ebook/list", {
+                params: {
+                    page: params.page,
+                    size: params.size,
+                }
+            }).then((response) => {
                 const data = response.data;
-                ebooks.value = data.content;
-                
-                pagination.value.current = params.pageSize;
+                ebooks.value = data.content.list;
+
+                // 重置分页按钮
+                pagination.value.current = params.current;
+                pagination.value.total = data.content.total;
             });
         };
 
         const handleTableChange = (pagination: any) => {
-            console.log(pagination)
+            console.log("看看你自带的分页参数都有啥" , pagination)
             handleQuery({
                 page: pagination.current,
                 size: pagination.pageSize
@@ -129,7 +137,10 @@ export default defineComponent({
         };
 
         onMounted(() => {
-            handleQuery({});
+            handleQuery({
+                page: pagination.value.current,
+                size: pagination.value.pageSize
+            });
         })
 
         return {

@@ -1,30 +1,33 @@
-package com.wjy.ebook.req;
+package com.wjy.ebook.resp;
 
-public class PageReq {
-    private int page;
-    private int size;
+import java.util.List;
 
-    public int getPage() {
-        return page;
+public class PageResp<T> {
+    private Long total;
+    private List<T> list;
+
+
+    public Long getTotal() {
+        return total;
     }
 
-    public void setPage(int page) {
-        this.page = page;
+    public void setTotal(Long total) {
+        this.total = total;
     }
 
-    public int getSize() {
-        return size;
+    public List<T> getList() {
+        return list;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setList(List<T> list) {
+        this.list = list;
     }
 
     @Override
     public String toString() {
-        return "PageReq{" +
-                "page=" + page +
-                ", size=" + size +
+        return "PageResp{" +
+                "total=" + total +
+                ", list=" + list +
                 '}';
     }
 }
