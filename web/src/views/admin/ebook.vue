@@ -1,12 +1,6 @@
 <template>
     <a-layout>
         <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
-            <!-- <a-table :columns="columns" :data-source="ebooks" :pagination="pagination" :loading="loading"
-                @change="handleTableChange">
-                <template #bodyCell="{ column, text }">
-                    <template v-if="column.dataIndex === 'name'">{{ text.first }} {{ text.last }}</template>
-                </template>
-            </a-table> -->
             <a-table :columns="columns" :data-source="ebooks" :pagination="pagination" :loading="loading"
                 @change="handleTableChange">
                 <template #headerCell="{ column }">
@@ -33,16 +27,9 @@
                         </span>
                     </template>
                     <template v-else-if="column.key === 'action'">
-                        <span>
-                            <a>Invite 一 {{ record.name }}</a>
-                            <a-divider type="vertical" />
+                        <a-popconfirm  title="Sure to delete?">
                             <a>Delete</a>
-                            <a-divider type="vertical" />
-                            <a class="ant-dropdown-link">
-                                More actions
-                                <down-outlined />
-                            </a>
-                        </span>
+                        </a-popconfirm>
                     </template>
                 </template>
             </a-table>
@@ -71,37 +58,50 @@ export default defineComponent({
                 name: 'name',
                 dataIndex: 'name',
                 key: 'name',
+                with: 200
             },
             {
-                title: 'category1_id',
+                title: '分类1',
                 dataIndex: 'category1_id',
                 key: 'category1_id',
+                with: 100
             },
             {
-                title: 'category2_id',
+                title: '分类2',
                 dataIndex: 'category2_id',
                 key: 'category2_id',
+                with: 100
             },
             {
-                title: 'description',
+                title: '描述',
                 key: 'description',
                 dataIndex: 'description',
+                with: 200
             },
             {
-                title: 'cover',
+                title: '封面',
                 key: 'cover',
+                with: 100
             },
             {
-                title: 'doc_count',
+                title: '文档数',
                 key: 'doc_count',
+                with: 100
             },
             {
-                title: 'view_count',
+                title: '阅读数',
                 key: 'view_count',
+                with: 100
             },
             {
-                title: 'vote_count',
+                title: '点赞数',
                 key: 'vote_count',
+                with: 100
+            },
+            {
+                title: 'Action',
+                key: 'action',
+                // slots: {customRender: 'action'}
             }
         ];
 
@@ -115,7 +115,7 @@ export default defineComponent({
             axios.get("/ebook/list", params).then((response) => {
                 const data = response.data;
                 ebooks.value = data.content;
-                console.log(params);
+                
                 pagination.value.current = params.pageSize;
             });
         };
