@@ -2605,3 +2605,69 @@
 2023-11-03 17:16:25.988 INFO  com.wjy.ebook.service.EbookService                :52   [32m                  [0;39m 总页数2
 2023-11-03 17:16:25.988 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":6,"name":"oracle 入门教程"}],"total":7},"success":true}
 2023-11-03 17:16:25.988 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2023-11-03 17:18:59.932 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-11-03 17:18:59.934 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:18:59.936 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 17:18:59.936 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-03 17:18:59.937 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2023-11-03 17:18:59.937 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:18:59.938 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:18:59.940 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-11-03 17:18:59.944 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-11-03 17:18:59.991 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 5672 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 17:18:59.992 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:19:00.059 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 17:19:00.059 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 17:19:00.060 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 17:19:00.117 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 17:19:00.119 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:19:00.119 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 17:19:00.119 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 17:19:00.126 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 17:19:00.126 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 133 ms
+2023-11-03 17:19:00.364 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 17:19:00.368 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:19:00.370 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 17:19:00.372 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.397 seconds (JVM running for 860.857)
+2023-11-03 17:19:00.372 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 17:19:00.372 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 17:19:00.373 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 17:20:21.044 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-03 17:20:21.044 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-11-03 17:20:21.045 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-11-03 17:20:21.055 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 17:20:21.055 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 17:20:21.055 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 17:20:21.055 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 17:20:21.056 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 17:20:21.060 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
+2023-11-03 17:20:21.069 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2023-11-03 17:20:21.069 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 17:20:21.070 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 17:20:21.072 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 17:20:21.072 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 7
+2023-11-03 17:20:21.072 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 17:20:21.072 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 17:20:21.073 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 17:20:21.073 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 17:20:21.073 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 17:20:21.074 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 17:20:21.074 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 17:20:21.074 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 17:20:21.074 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 6, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 17:20:21.074 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 17:20:21.075 INFO  com.wjy.ebook.service.EbookService                :51   [32m                  [0;39m 总行数:7
+2023-11-03 17:20:21.075 INFO  com.wjy.ebook.service.EbookService                :52   [32m                  [0;39m 总页数2
+2023-11-03 17:20:21.079 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":6,"name":"oracle 入门教程"}],"total":7},"success":true}
+2023-11-03 17:20:21.080 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：26 ms -------------
+2023-11-03 17:20:38.752 WARN  c.wjy.ebook.controller.ControllerExceptionHandler :28   [32m                  [0;39m 参数校验失败：名称不能为空
+2023-11-03 17:20:38.753 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.wjy.ebook.resp.CommonResp com.wjy.ebook.controller.EbookController.save(com.wjy.ebook.req.EbookSaveReq): [Field error in object 'ebookSaveReq' on field 'name': rejected value [null]; codes [NotNull.ebookSaveReq.name,NotNull.name,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookSaveReq.name,name]; arguments []; default message [name]]; default message [名称不能为空]] ]
