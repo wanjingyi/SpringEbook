@@ -27,13 +27,23 @@
                         </span>
                     </template>
                     <template v-else-if="column.key === 'action'">
-                        <a-popconfirm title="Sure to delete?">
+                        <!-- <a-popconfirm title="Sure to delete?">
                             <a>Delete</a>
-                        </a-popconfirm>
+                        </a-popconfirm> -->
+                        <a-space wrap>
+                            <a-button type="primary" @click="showModal">编辑</a-button>
+                            <a-button type="primary" danger @click="showModal">删除</a-button>
+                        </a-space>
                     </template>
                 </template>
             </a-table>
         </a-layout-content>
+
+        <a-modal v-model:open="open" title="电子书表单" @ok="handleEidt">
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+        </a-modal>
     </a-layout>
 </template>
 
@@ -106,6 +116,17 @@ export default defineComponent({
             }
         ];
 
+        const open = ref<boolean>(false);
+
+        const showModal = () => {
+            open.value = true;
+        };
+
+        const handleEidt = (e: MouseEvent) => {
+            console.log(e);
+            open.value = false;
+        };
+
         const ebooks = ref();
 
         /**
@@ -129,7 +150,7 @@ export default defineComponent({
         };
 
         const handleTableChange = (pagination: any) => {
-            console.log("看看你自带的分页参数都有啥" , pagination)
+            console.log("看看你自带的分页参数都有啥", pagination)
             handleQuery({
                 page: pagination.current,
                 size: pagination.pageSize
@@ -148,7 +169,10 @@ export default defineComponent({
             columns,
             loading,
             pagination,
-            handleTableChange
+            handleTableChange,
+            showModal,
+            handleEidt,
+            open
         }
     }
 });
