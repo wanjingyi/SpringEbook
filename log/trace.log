@@ -346,3 +346,503 @@
 2023-11-03 13:54:02.750 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
 2023-11-03 13:54:02.750 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
 2023-11-03 13:54:02.750 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：5 ms -------------
+2023-11-03 14:06:48.834 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 14:06:48.834 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 14:06:48.834 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 14:06:48.834 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 14:06:48.835 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 14:06:48.836 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 14:06:48.836 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 14:06:48.838 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 14:06:48.838 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 14:06:48.838 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 14:06:48.838 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 14:06:48.839 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 14:06:48.839 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 14:06:48.839 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 14:06:48.840 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 14:06:48.840 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 14:06:48.840 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 14:06:48.840 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 14:06:48.840 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 14:06:48.840 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-11-03 14:06:48.841 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-11-03 14:06:48.841 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 14:06:48.841 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：7 ms -------------
+2023-11-03 14:06:56.097 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 14:06:56.097 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 14:06:56.097 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 14:06:56.097 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 14:06:56.097 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 14:06:56.098 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 14:06:56.098 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 14:06:56.100 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 14:06:56.100 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 14:06:56.100 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 14:06:56.101 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 14:06:56.101 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 14:06:56.101 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 14:06:56.102 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 14:06:56.102 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 14:06:56.102 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 14:06:56.102 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 14:06:56.102 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 14:06:56.103 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 14:06:56.103 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-11-03 14:06:56.103 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-11-03 14:06:56.103 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 14:06:56.103 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2023-11-03 14:29:35.721 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 14:29:35.722 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 14:29:35.722 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 14:29:35.722 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 14:29:35.722 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 14:29:35.724 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 14:29:35.724 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 14:29:35.726 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 14:29:35.726 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 14:29:35.726 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 14:29:35.727 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 14:29:35.727 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 14:29:35.728 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 14:29:35.728 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 14:29:35.728 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 14:29:35.728 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 14:29:35.728 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 14:29:35.729 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 14:29:35.729 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 14:29:35.729 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-11-03 14:29:35.730 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-11-03 14:29:35.730 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 14:29:35.731 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2023-11-03 14:29:39.216 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 14:29:39.216 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 14:29:39.216 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 14:29:39.216 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 14:29:39.217 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 14:29:39.218 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 14:29:39.219 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 14:29:39.221 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 14:29:39.221 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 14:29:39.221 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 14:29:39.222 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 14:29:39.222 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 14:29:39.224 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 14:29:39.224 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 14:29:39.224 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 14:29:39.224 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 14:29:39.225 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 14:29:39.225 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 14:29:39.225 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 14:29:39.225 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-11-03 14:29:39.225 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-11-03 14:29:39.226 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 14:29:39.226 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2023-11-03 14:41:55.569 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 14:41:55.570 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 14:41:55.570 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 14:41:55.570 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 14:41:55.571 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 14:41:55.572 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 14:41:55.572 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 14:41:55.574 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 14:41:55.575 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 14:41:55.575 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 14:41:55.575 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 14:41:55.575 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 14:41:55.577 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 14:41:55.577 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 14:41:55.578 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 14:41:55.578 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 14:41:55.578 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 14:41:55.579 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 14:41:55.579 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 14:41:55.579 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-11-03 14:41:55.579 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-11-03 14:41:55.580 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 14:41:55.580 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：11 ms -------------
+2023-11-03 14:43:08.354 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 14:43:08.354 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 14:43:08.355 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 14:43:08.355 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 14:43:08.355 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 14:43:08.356 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 14:43:08.356 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 14:43:08.358 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 14:43:08.358 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 14:43:08.358 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 14:43:08.359 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 14:43:08.359 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 14:43:08.360 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 14:43:08.360 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 14:43:08.360 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 14:43:08.360 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 14:43:08.360 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 14:43:08.361 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 14:43:08.361 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 14:43:08.361 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-11-03 14:43:08.361 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-11-03 14:43:08.362 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 14:43:08.362 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2023-11-03 14:43:31.636 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 14:43:31.636 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 14:43:31.637 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 14:43:31.637 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 14:43:31.637 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 14:43:31.637 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 14:43:31.638 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 14:43:31.639 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 14:43:31.640 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 14:43:31.640 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 14:43:31.640 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 14:43:31.640 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 14:43:31.641 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 14:43:31.641 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 14:43:31.641 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 14:43:31.641 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 14:43:31.641 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 14:43:31.641 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 14:43:31.641 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 14:43:31.641 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-11-03 14:43:31.642 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-11-03 14:43:31.642 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 14:43:31.642 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2023-11-03 14:43:35.611 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 14:43:35.612 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 14:43:35.612 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 14:43:35.612 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 14:43:35.612 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 14:43:35.613 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 14:43:35.613 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 14:43:35.615 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 14:43:35.615 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 14:43:35.615 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 14:43:35.616 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 14:43:35.617 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 14:43:35.618 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 14:43:35.618 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 14:43:35.618 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 14:43:35.619 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 14:43:35.619 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 14:43:35.619 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 14:43:35.619 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 14:43:35.620 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-11-03 14:43:35.620 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-11-03 14:43:35.620 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 14:43:35.620 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2023-11-03 14:57:51.679 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 4 class path changes (1 addition, 1 deletion, 2 modifications)
+2023-11-03 14:57:51.688 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 14:57:51.688 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 14:57:51.688 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-03 14:57:51.690 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2023-11-03 14:57:51.690 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 14:57:51.691 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 14:57:51.693 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-11-03 14:57:51.697 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-11-03 14:57:51.775 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 30604 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 14:57:51.775 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 14:57:51.850 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 14:57:51.850 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 14:57:51.850 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 14:57:51.923 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 14:57:51.924 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 14:57:51.924 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 14:57:51.924 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 14:57:51.931 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 14:57:51.931 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 155 ms
+2023-11-03 14:57:52.202 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 14:57:52.207 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 14:57:52.208 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 14:57:52.210 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.459 seconds (JVM running for 5375.151)
+2023-11-03 14:57:52.211 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 14:57:52.211 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 14:57:52.212 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 15:12:23.800 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2023-11-03 15:12:23.803 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:12:23.803 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 15:12:23.804 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:12:23.804 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:12:23.855 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 30604 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 15:12:23.855 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 15:12:23.915 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 15:12:23.915 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 15:12:23.916 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 15:12:23.967 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 15:12:23.967 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:12:23.967 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 15:12:23.967 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 15:12:23.973 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 15:12:23.974 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 118 ms
+2023-11-03 15:12:24.200 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 15:12:24.206 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:12:24.207 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 15:12:24.209 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.369 seconds (JVM running for 6247.15)
+2023-11-03 15:12:24.209 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 15:12:24.209 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 15:12:24.209 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 15:14:27.071 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.5.Final
+2023-11-03 15:14:27.084 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 15:14:27.084 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 15:14:27.109 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-03 15:14:27.109 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-03 15:14:27.409 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 15:14:27.410 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 15:14:27.419 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-11-03 15:14:27.829 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 15:14:27.834 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:14:27.834 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 15:14:27.834 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 15:14:27.869 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 15:14:27.870 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 760 ms
+2023-11-03 15:14:28.526 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 15:14:28.535 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:14:28.545 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 15:14:28.549 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 1.699 seconds (JVM running for 2.055)
+2023-11-03 15:14:28.551 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 15:14:28.551 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 15:22:51.822 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-03 15:22:51.823 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-11-03 15:22:51.824 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-11-03 15:22:51.860 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 15:22:51.861 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 15:22:51.861 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 15:22:51.861 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 15:22:51.904 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 15:22:51.938 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2023-11-03 15:22:52.159 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2023-11-03 15:22:52.195 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 15:22:52.213 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 15:22:52.230 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 15:22:52.230 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 15:22:52.231 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 15:22:52.233 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 15:22:52.234 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 15:22:52.235 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 15:22:52.235 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 15:22:52.236 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 15:22:52.237 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 15:22:52.237 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 15:22:52.237 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 15:22:52.238 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 15:22:52.239 INFO  com.wjy.ebook.service.EbookService                :47   [32m                  [0;39m 总行数:8
+2023-11-03 15:22:52.239 INFO  com.wjy.ebook.service.EbookService                :48   [32m                  [0;39m 总页数2
+2023-11-03 15:22:52.251 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 15:22:52.252 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：393 ms -------------
+2023-11-03 15:23:00.648 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 15:23:00.648 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 15:23:00.649 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 15:23:00.649 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 15:23:00.649 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 15:23:00.650 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 15:23:00.650 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 15:23:00.652 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 15:23:00.652 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 15:23:00.653 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 15:23:00.653 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 15:23:00.654 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 15:23:00.655 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 15:23:00.655 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 15:23:00.655 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 15:23:00.656 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 15:23:00.656 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 15:23:00.657 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 15:23:00.657 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 15:23:00.657 INFO  com.wjy.ebook.service.EbookService                :47   [32m                  [0;39m 总行数:8
+2023-11-03 15:23:00.657 INFO  com.wjy.ebook.service.EbookService                :48   [32m                  [0;39m 总页数2
+2023-11-03 15:23:00.658 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 15:23:00.658 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2023-11-03 15:23:05.732 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 15:23:05.733 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 15:23:05.734 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 15:23:05.734 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 15:23:05.734 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 15:23:05.736 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 15:23:05.737 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 15:23:05.741 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 15:23:05.741 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 15:23:05.742 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 15:23:05.742 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 15:23:05.743 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 15:23:05.744 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 15:23:05.745 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 15:23:05.745 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 15:23:05.745 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 15:23:05.746 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 15:23:05.746 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 15:23:05.747 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 15:23:05.747 INFO  com.wjy.ebook.service.EbookService                :47   [32m                  [0;39m 总行数:8
+2023-11-03 15:23:05.747 INFO  com.wjy.ebook.service.EbookService                :48   [32m                  [0;39m 总页数2
+2023-11-03 15:23:05.748 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 15:23:05.749 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：17 ms -------------
+2023-11-03 15:23:09.048 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 15:23:09.048 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/save POST
+2023-11-03 15:23:09.048 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.save
+2023-11-03 15:23:09.048 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 15:23:09.052 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{}]
+2023-11-03 15:23:09.057 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"success":true}
+2023-11-03 15:23:09.057 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2023-11-03 15:27:20.044 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 15:27:20.044 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 15:27:20.045 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 15:27:20.045 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 15:27:20.045 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 15:27:20.047 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 15:27:20.047 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 15:27:20.050 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 15:27:20.050 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 15:27:20.051 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 15:27:20.051 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 15:27:20.051 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 15:27:20.052 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 15:27:20.052 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 15:27:20.052 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 15:27:20.053 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 15:27:20.053 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 15:27:20.053 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 15:27:20.054 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 15:27:20.054 INFO  com.wjy.ebook.service.EbookService                :47   [32m                  [0;39m 总行数:8
+2023-11-03 15:27:20.054 INFO  com.wjy.ebook.service.EbookService                :48   [32m                  [0;39m 总页数2
+2023-11-03 15:27:20.055 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 15:27:20.055 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：11 ms -------------
+2023-11-03 15:27:20.309 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 15:27:20.309 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 15:27:20.310 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 15:27:20.310 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 15:27:20.310 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 15:27:20.311 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 15:27:20.312 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 15:27:20.314 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 15:27:20.314 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-11-03 15:27:20.314 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 15:27:20.314 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 15:27:20.315 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 15:27:20.316 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 15:27:20.316 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-11-03 15:27:20.317 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 15:27:20.317 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 15:27:20.317 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 15:27:20.317 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 15:27:20.318 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 15:27:20.318 INFO  com.wjy.ebook.service.EbookService                :47   [32m                  [0;39m 总行数:8
+2023-11-03 15:27:20.318 INFO  com.wjy.ebook.service.EbookService                :48   [32m                  [0;39m 总页数2
+2023-11-03 15:27:20.318 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"}],"total":8},"success":true}
+2023-11-03 15:27:20.318 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2023-11-03 15:30:29.940 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-03 15:30:29.944 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:30:29.944 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 15:30:29.944 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-03 15:30:29.946 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2023-11-03 15:30:29.947 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:30:29.948 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:30:29.957 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-11-03 15:30:29.960 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-11-03 15:30:30.011 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 15:30:30.011 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 15:30:30.083 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 15:30:30.083 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 15:30:30.084 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 15:30:30.152 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 15:30:30.152 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:30:30.152 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 15:30:30.152 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 15:30:30.159 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 15:30:30.160 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 148 ms
+2023-11-03 15:30:30.418 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 15:30:30.422 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:30:30.424 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 15:30:30.425 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.434 seconds (JVM running for 963.931)
+2023-11-03 15:30:30.426 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 15:30:30.426 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 15:30:30.428 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 15:30:52.352 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-03 15:30:52.352 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-11-03 15:30:52.353 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-11-03 15:30:52.395 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 15:30:52.395 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/save POST
+2023-11-03 15:30:52.395 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.save
+2023-11-03 15:30:52.395 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 15:30:52.397 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"}]
+2023-11-03 15:30:52.407 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
+2023-11-03 15:30:52.421 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2023-11-03 15:30:52.422 DEBUG c.wjy.ebook.mapper.EbookMapper.updateByPrimaryKey :137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2023-11-03 15:30:52.426 DEBUG c.wjy.ebook.mapper.EbookMapper.updateByPrimaryKey :137  [32m                  [0;39m ==> Parameters: Spring Boot 入门教程(String), null, null, 零基础如门 Java 开发 ，企业级应用开发程序(String), /image/cover1.jpg(String), null, null, null, 1(Long)
+2023-11-03 15:30:52.431 DEBUG c.wjy.ebook.mapper.EbookMapper.updateByPrimaryKey :137  [32m                  [0;39m <==    Updates: 1
+2023-11-03 15:30:52.433 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"success":true}
+2023-11-03 15:30:52.434 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：39 ms -------------
+2023-11-03 15:41:48.020 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 3 class path changes (0 additions, 3 deletions, 0 modifications)
+2023-11-03 15:41:48.023 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:48.023 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 15:41:48.024 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-03 15:41:48.024 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2023-11-03 15:41:48.024 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:48.026 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:48.028 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2023-11-03 15:41:48.031 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2023-11-03 15:41:48.099 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 15:41:48.100 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 15:41:48.167 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 15:41:48.167 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 15:41:48.167 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 15:41:48.227 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 15:41:48.229 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:48.229 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 15:41:48.229 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 15:41:48.237 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 15:41:48.237 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 136 ms
+2023-11-03 15:41:48.472 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 15:41:48.477 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:48.479 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 15:41:48.480 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.4 seconds (JVM running for 1641.985)
+2023-11-03 15:41:48.481 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 15:41:48.482 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 15:41:48.482 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 15:41:49.889 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
+2023-11-03 15:41:49.891 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:49.891 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 15:41:49.892 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:49.892 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:49.955 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 15:41:49.956 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 15:41:50.020 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 15:41:50.020 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 15:41:50.021 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 15:41:50.077 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 15:41:50.078 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:50.078 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 15:41:50.078 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 15:41:50.086 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 15:41:50.086 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 129 ms
+2023-11-03 15:41:50.324 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 15:41:50.329 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 15:41:50.330 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 15:41:50.332 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.392 seconds (JVM running for 1643.837)
+2023-11-03 15:41:50.333 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 15:41:50.333 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 15:41:50.333 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086

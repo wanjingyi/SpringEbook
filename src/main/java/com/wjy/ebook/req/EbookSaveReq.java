@@ -1,6 +1,6 @@
 package com.wjy.ebook.req;
 
-public class EbookReq extends PageReq{
+public class EbookSaveReq {
     private Long id;
 
     private String name;

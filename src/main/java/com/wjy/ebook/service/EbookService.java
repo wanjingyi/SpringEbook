@@ -5,8 +5,9 @@ import com.github.pagehelper.PageInfo;
 import com.wjy.ebook.domain.Ebook;
 import com.wjy.ebook.domain.EbookExample;
 import com.wjy.ebook.mapper.EbookMapper;
-import com.wjy.ebook.req.EbookReq;
-import com.wjy.ebook.resp.EbookResp;
+import com.wjy.ebook.req.EbookQueryReq;
+import com.wjy.ebook.req.EbookSaveReq;
+import com.wjy.ebook.resp.EbookQueryResp;
 import com.wjy.ebook.resp.PageResp;
 import com.wjy.ebook.utils.CopyUtil;
 import org.slf4j.Logger;
@@ -25,7 +26,13 @@ public class EbookService {
     @Resource
     private EbookMapper ebookMapper;
 
-    public PageResp<EbookResp> list(EbookReq req) {
+    /**
+     * 查询接口
+     * @param req
+     * @return
+     */
+
+    public PageResp<EbookQueryResp> list(EbookQueryReq req) {
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
 
@@ -39,24 +46,28 @@ public class EbookService {
         LOG.info("总行数:{}", pageInfo.getTotal());
         LOG.info("总页数{}", pageInfo.getPages());
 
-//        List<EbookResp> respList = new ArrayList<>();
-//
-//        for (Ebook ebook : ebookList) {
-////            EbookResp ebookResp = new EbookResp();
-////            BeanUtils.copyProperties(ebook,ebookResp);
-//
-//            EbookResp ebookResp = CopyUtil.copy(ebook, EbookResp.class);
-//
-//            respList.add(ebookResp);
-//        }
-
         //列表数据
-        List<EbookResp> respList = CopyUtil.copyList(ebookList, EbookResp.class);
+        List<EbookQueryResp> respList = CopyUtil.copyList(ebookList, EbookQueryResp.class);
 
-        PageResp<EbookResp> pageResp = new PageResp();
+        PageResp<EbookQueryResp> pageResp = new PageResp();
         pageResp.setTotal(pageInfo.getTotal());
         pageResp.setList(respList);
 
         return pageResp;
     }
+
+    /**
+     * 新增保存接口
+     */
+    public void save(EbookSaveReq req) {
+        Ebook ebook = CopyUtil.copy(req, Ebook.class);
+        if (ObjectUtils.isEmpty(req.getId())) {
+            //新增
+        }else {
+            ebookMapper.updateByPrimaryKey(ebook);
+        }
+    }
+
+
+
 }

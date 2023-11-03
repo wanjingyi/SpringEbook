@@ -137,14 +137,19 @@ export default defineComponent({
         const open = ref<boolean>(false);
 
         const handleEdit = (record : any) => {
-            console.log(record);
             open.value = true;
             modalData.value = record;
         };
 
         const handleOk = (e: MouseEvent) => {
-            console.log(e);
             open.value = false;
+            axios.post("/ebook/save",modalData.value).then((response) => {
+                // console.log(response,'222222');
+                const data = response.data;
+                // if (data.success) {
+
+                // }
+            });
         };
 
 
