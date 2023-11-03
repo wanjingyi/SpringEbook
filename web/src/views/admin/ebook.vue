@@ -185,7 +185,7 @@ export default defineComponent({
          */
         const handleDelete = (id: number) => {
             axios.delete("/ebook/delete/" + id).then((response) => {
-                console.log(response,'2222');
+                console.log(response, '2222');
                 const data = response.data;
                 if (data.success) {
                     //重新加载
@@ -203,19 +203,26 @@ export default defineComponent({
         * 数据查询
         */
         const handleQuery = (params: any) => {
-            // loading.value = true;
+            loading.value = true;
             axios.get("/ebook/list", {
                 params: {
                     page: params.page,
                     size: params.size,
                 }
             }).then((response) => {
+                loading.value = false;
                 const data = response.data;
-                ebooks.value = data.content.list;
 
-                // 重置分页按钮
-                pagination.value.current = params.current;
-                pagination.value.total = data.content.total;
+                if (data.success) {
+                    ebooks.value = data.content.list;
+
+                    // 重置分页按钮
+                    pagination.value.current = params.current;
+                    pagination.value.total = data.content.total;
+                }else {
+                    message.error(data.message);
+                }
+
             });
         };
 

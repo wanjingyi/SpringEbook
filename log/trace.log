@@ -2349,3 +2349,259 @@
 2023-11-03 16:57:35.229 INFO  com.wjy.ebook.service.EbookService                :52   [32m                  [0;39m 总页数2
 2023-11-03 16:57:35.230 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":6,"name":"oracle 入门教程"}],"total":7},"success":true}
 2023-11-03 16:57:35.230 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2023-11-03 17:01:14.449 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-03 17:01:14.452 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:14.452 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 17:01:14.452 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-03 17:01:14.454 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-5 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2023-11-03 17:01:14.454 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:14.455 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:14.456 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-5 - Shutdown initiated...
+2023-11-03 17:01:14.458 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-5 - Shutdown completed.
+2023-11-03 17:01:14.504 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 17:01:14.504 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:01:14.559 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 17:01:14.559 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 17:01:14.560 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 17:01:14.609 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 17:01:14.610 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:14.610 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 17:01:14.610 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 17:01:14.615 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 17:01:14.615 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 110 ms
+2023-11-03 17:01:14.831 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 17:01:14.836 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:14.836 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 17:01:14.839 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.346 seconds (JVM running for 6408.343)
+2023-11-03 17:01:14.839 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 17:01:14.839 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 17:01:14.839 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 17:01:35.500 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-03 17:01:35.502 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:35.502 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 17:01:35.504 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:35.505 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:35.570 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 17:01:35.570 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:01:35.624 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 17:01:35.624 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 17:01:35.625 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 17:01:35.672 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 17:01:35.672 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:35.672 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 17:01:35.672 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 17:01:35.678 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 17:01:35.678 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 106 ms
+2023-11-03 17:01:35.892 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 17:01:35.895 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:01:35.897 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 17:01:35.898 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.34 seconds (JVM running for 6429.403)
+2023-11-03 17:01:35.898 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 17:01:35.899 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 17:01:35.899 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 17:02:34.560 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-03 17:02:34.562 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:02:34.562 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 17:02:34.563 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:02:34.564 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:02:34.608 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 17:02:34.608 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:02:34.665 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 17:02:34.665 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 17:02:34.666 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 17:02:34.716 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 17:02:34.717 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:02:34.717 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 17:02:34.717 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 17:02:34.723 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 17:02:34.723 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 114 ms
+2023-11-03 17:02:34.929 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 17:02:34.932 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:02:34.934 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 17:02:34.935 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.339 seconds (JVM running for 6488.441)
+2023-11-03 17:02:34.936 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 17:02:34.936 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 17:02:34.936 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 17:03:01.238 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-03 17:03:01.241 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:01.241 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 17:03:01.241 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:01.242 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:01.305 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 17:03:01.305 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:03:01.359 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 17:03:01.359 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 17:03:01.360 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 17:03:01.406 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 17:03:01.406 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:01.406 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 17:03:01.406 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 17:03:01.412 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 17:03:01.413 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 107 ms
+2023-11-03 17:03:01.627 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 17:03:01.631 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:01.633 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 17:03:01.634 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.341 seconds (JVM running for 6515.14)
+2023-11-03 17:03:01.635 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 17:03:01.635 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 17:03:01.635 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 17:03:29.417 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-03 17:03:29.420 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:29.420 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 17:03:29.422 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:29.423 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:29.484 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 35524 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 17:03:29.484 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:03:29.540 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 17:03:29.540 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 17:03:29.540 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 17:03:29.587 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 17:03:29.587 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:29.587 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 17:03:29.587 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 17:03:29.594 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 17:03:29.594 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 109 ms
+2023-11-03 17:03:29.796 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 17:03:29.801 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:03:29.802 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 17:03:29.803 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.333 seconds (JVM running for 6543.309)
+2023-11-03 17:03:29.804 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 17:03:29.804 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 17:03:29.804 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 17:04:40.118 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.5.Final
+2023-11-03 17:04:40.130 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 5672 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 17:04:40.130 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:04:40.161 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-03 17:04:40.161 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-03 17:04:40.485 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 17:04:40.486 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 17:04:40.495 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-11-03 17:04:40.920 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 17:04:40.924 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:04:40.925 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 17:04:40.925 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 17:04:40.967 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 17:04:40.967 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 805 ms
+2023-11-03 17:04:41.653 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 17:04:41.662 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:04:41.673 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 17:04:41.677 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 1.793 seconds (JVM running for 2.164)
+2023-11-03 17:04:41.679 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 17:04:41.679 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 17:05:10.554 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-03 17:05:10.555 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-11-03 17:05:10.555 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2023-11-03 17:05:10.656 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver :208  [32m                  [0;39m Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'ebookQueryReq' on field 'size': rejected value [101]; codes [Max.ebookQueryReq.size,Max.size,Max.int,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookQueryReq.size,size]; arguments []; default message [size],100]; default message [每页条数不能超过100]]
+2023-11-03 17:06:05.768 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver :208  [32m                  [0;39m Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'ebookQueryReq' on field 'size': rejected value [101]; codes [Max.ebookQueryReq.size,Max.size,Max.int,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookQueryReq.size,size]; arguments []; default message [size],100]; default message [每页条数不能超过100]]
+2023-11-03 17:06:15.799 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver :208  [32m                  [0;39m Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'ebookQueryReq' on field 'size': rejected value [101]; codes [Max.ebookQueryReq.size,Max.size,Max.int,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookQueryReq.size,size]; arguments []; default message [size],100]; default message [每页条数不能超过100]]
+2023-11-03 17:10:08.953 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
+2023-11-03 17:10:08.958 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:10:08.958 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-11-03 17:10:08.958 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-03 17:10:08.961 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:10:08.962 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:10:09.028 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 5672 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-11-03 17:10:09.028 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:10:09.094 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-03 17:10:09.094 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-03 17:10:09.094 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-11-03 17:10:09.154 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8086 (http)
+2023-11-03 17:10:09.154 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:10:09.155 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-11-03 17:10:09.155 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-03 17:10:09.161 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-11-03 17:10:09.161 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 132 ms
+2023-11-03 17:10:09.379 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-11-03 17:10:09.384 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8086"]
+2023-11-03 17:10:09.387 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8086 (http) with context path ''
+2023-11-03 17:10:09.388 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.378 seconds (JVM running for 329.874)
+2023-11-03 17:10:09.390 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-11-03 17:10:09.390 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-11-03 17:10:09.390 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8086
+2023-11-03 17:11:45.588 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-03 17:11:45.588 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-11-03 17:11:45.589 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2023-11-03 17:11:45.606 WARN  c.wjy.ebook.controller.ControllerExceptionHandler :28   [32m                  [0;39m 参数校验失败：每页条数不能超过100
+2023-11-03 17:11:45.609 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'ebookQueryReq' on field 'size': rejected value [101]; codes [Max.ebookQueryReq.size,Max.size,Max.int,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookQueryReq.size,size]; arguments []; default message [size],100]; default message [每页条数不能超过100]]
+2023-11-03 17:12:26.909 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 17:12:26.910 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 17:12:26.910 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 17:12:26.910 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 17:12:26.947 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 17:12:26.973 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2023-11-03 17:12:27.164 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2023-11-03 17:12:27.195 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 17:12:27.210 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 17:12:27.225 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 17:12:27.225 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 7
+2023-11-03 17:12:27.226 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 17:12:27.227 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 17:12:27.228 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 17:12:27.229 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 17:12:27.229 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 17:12:27.230 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 17:12:27.230 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 17:12:27.230 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 17:12:27.231 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 6, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 17:12:27.231 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 17:12:27.232 INFO  com.wjy.ebook.service.EbookService                :51   [32m                  [0;39m 总行数:7
+2023-11-03 17:12:27.232 INFO  com.wjy.ebook.service.EbookService                :52   [32m                  [0;39m 总页数2
+2023-11-03 17:12:27.240 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":6,"name":"oracle 入门教程"}],"total":7},"success":true}
+2023-11-03 17:12:27.241 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：332 ms -------------
+2023-11-03 17:16:00.255 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 17:16:00.255 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 17:16:00.255 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 17:16:00.256 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 17:16:00.256 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 17:16:00.258 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 17:16:00.259 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 17:16:00.261 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 17:16:00.263 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 7
+2023-11-03 17:16:00.263 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 17:16:00.263 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 17:16:00.264 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 17:16:00.264 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 17:16:00.264 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 17:16:00.265 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 17:16:00.265 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 17:16:00.265 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 17:16:00.265 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 6, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 17:16:00.265 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 17:16:00.265 INFO  com.wjy.ebook.service.EbookService                :51   [32m                  [0;39m 总行数:7
+2023-11-03 17:16:00.265 INFO  com.wjy.ebook.service.EbookService                :52   [32m                  [0;39m 总页数2
+2023-11-03 17:16:00.265 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":6,"name":"oracle 入门教程"}],"total":7},"success":true}
+2023-11-03 17:16:00.266 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：11 ms -------------
+2023-11-03 17:16:13.220 WARN  c.wjy.ebook.controller.ControllerExceptionHandler :28   [32m                  [0;39m 参数校验失败：每页条数不能超过100
+2023-11-03 17:16:13.221 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'ebookQueryReq' on field 'size': rejected value [500]; codes [Max.ebookQueryReq.size,Max.size,Max.int,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookQueryReq.size,size]; arguments []; default message [size],100]; default message [每页条数不能超过100]]
+2023-11-03 17:16:25.980 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-11-03 17:16:25.981 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://127.0.0.1:8086/ebook/list GET
+2023-11-03 17:16:25.981 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-11-03 17:16:25.981 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-11-03 17:16:25.981 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2023-11-03 17:16:25.982 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-11-03 17:16:25.982 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-11-03 17:16:25.984 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-11-03 17:16:25.984 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 7
+2023-11-03 17:16:25.984 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-11-03 17:16:25.985 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-11-03 17:16:25.985 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 5(Integer)
+2023-11-03 17:16:25.986 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-11-03 17:16:25.986 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-11-03 17:16:25.986 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-11-03 17:16:25.987 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-11-03 17:16:25.987 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 5, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 17:16:25.987 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 6, oracle 入门教程, null, null, 零基础如门 oracle 开发 ，企业级应用开发程序, /image/cover5.jpg, null, null, null
+2023-11-03 17:16:25.987 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 5
+2023-11-03 17:16:25.988 INFO  com.wjy.ebook.service.EbookService                :51   [32m                  [0;39m 总行数:7
+2023-11-03 17:16:25.988 INFO  com.wjy.ebook.service.EbookService                :52   [32m                  [0;39m 总页数2
+2023-11-03 17:16:25.988 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":5,"name":"oracle 入门教程"},{"cover":"/image/cover5.jpg","description":"零基础如门 oracle 开发 ，企业级应用开发程序","id":6,"name":"oracle 入门教程"}],"total":7},"success":true}
+2023-11-03 17:16:25.988 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
