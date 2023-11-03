@@ -1,9 +1,15 @@
 <template>
     <a-layout>
         <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
+
+            <a-button type="primary" @click="handleAdd">新增</a-button>
+
             <a-table :columns="columns" :data-source="ebooks" :pagination="pagination" :loading="loading"
                 @change="handleTableChange">
                 <template #headerCell="{ column }">
+                    <!-- <template>
+                        <img  v-if="column.key === 'cover'" src="cover" alt="">
+                    </template> -->
                     <template v-if="column.key === 'name'">
                         <span>
                             <smile-outlined />
@@ -27,12 +33,13 @@
                         </span>
                     </template>
                     <template v-else-if="column.key === 'action'">
-                        <!-- <a-popconfirm title="Sure to delete?">
-                            <a>Delete</a>
-                        </a-popconfirm> -->
                         <a-space wrap>
                             <a-button type="primary" @click="handleEdit(record)">编辑</a-button>
-                            <a-button type="primary" danger>删除</a-button>
+
+                            <a-popconfirm title="删除后不可以恢复，确认删除?" ok-text="是" cancel-text="否"
+                                @confirm="handleDelete(record.id)">
+                                <a-button type="primary" danger>删除</a-button>
+                            </a-popconfirm>
                         </a-space>
                     </template>
                 </template>
@@ -40,23 +47,23 @@
         </a-layout-content>
 
         <a-modal v-model:open="open" title="电子书表单" @ok="handleOk">
-            <a-form :model="modalData"  name="nest-messages">
-                <a-form-item  label="封面">
+            <a-form :model="modalData" name="nest-messages">
+                <a-form-item label="封面">
                     <a-input v-model:value="modalData.cover" />
                 </a-form-item>
-                <a-form-item  label="名称">
+                <a-form-item label="名称">
                     <a-input v-model:value="modalData.name" />
                 </a-form-item>
-                <a-form-item  label="分类一">
+                <a-form-item label="分类一">
                     <a-input v-model:value="modalData.category1_id" />
                 </a-form-item>
-                <a-form-item  label="分类二">
+                <a-form-item label="分类二">
                     <a-input v-model:value="modalData.category2_id" />
                 </a-form-item>
-                <a-form-item  label="描述">
-                    <a-input v-model:value="modalData.description" />
+                <a-form-item label="描述">
+                    <a-input v-model:value="modalData.description" type="textarea" />
                 </a-form-item>
-              
+
             </a-form>
         </a-modal>
     </a-layout>
@@ -65,6 +72,7 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref, computed } from 'vue';
 import axios from 'axios';
+import { message } from 'ant-design-vue';
 
 export default defineComponent({
     name: 'adminEbook',
@@ -81,7 +89,13 @@ export default defineComponent({
 
         const columns = [
             {
-                name: 'name',
+                name: '封面',
+                dataIndex: 'cover',
+                key: 'cover',
+                with: 200
+            },
+            {
+                name: '名称',
                 dataIndex: 'name',
                 key: 'name',
                 with: 200
@@ -130,28 +144,58 @@ export default defineComponent({
                 // slots: {customRender: 'action'}
             }
         ];
-         /**
-         * 模态框数据
-         */
+        /**
+        * 模态框数据
+        */
         const modalData = ref();
         const open = ref<boolean>(false);
 
-        const handleEdit = (record : any) => {
+        const handleEdit = (record: any) => {
             open.value = true;
             modalData.value = record;
         };
 
         const handleOk = (e: MouseEvent) => {
-            open.value = false;
-            axios.post("/ebook/save",modalData.value).then((response) => {
+            open.value = true;
+            axios.post("/ebook/save", modalData.value).then((response) => {
                 // console.log(response,'222222');
                 const data = response.data;
-                // if (data.success) {
+                if (data.success) {
+                    open.value = false;
 
-                // }
+                    //重新加载
+                    handleQuery({
+                        page: pagination.value.current,
+                        size: pagination.value.pageSize
+                    });
+                }
             });
         };
 
+        /**
+        * 新增
+        */
+        const handleAdd = () => {
+            open.value = true;
+            modalData.value = {};
+        };
+
+        /**
+         * 删除
+         */
+        const handleDelete = (id: number) => {
+            axios.delete("/ebook/delete/" + id).then((response) => {
+                console.log(response,'2222');
+                const data = response.data;
+                if (data.success) {
+                    //重新加载
+                    handleQuery({
+                        page: pagination.value.current,
+                        size: pagination.value.pageSize
+                    });
+                }
+            });
+        };
 
         const ebooks = ref();
 
@@ -183,6 +227,8 @@ export default defineComponent({
             });
         };
 
+
+
         onMounted(() => {
             handleQuery({
                 page: pagination.value.current,
@@ -199,7 +245,9 @@ export default defineComponent({
             handleEdit,
             handleOk,
             open,
-            modalData
+            modalData,
+            handleAdd,
+            handleDelete
         }
     }
 });

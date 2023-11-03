@@ -10,8 +10,10 @@ import com.wjy.ebook.req.EbookSaveReq;
 import com.wjy.ebook.resp.EbookQueryResp;
 import com.wjy.ebook.resp.PageResp;
 import com.wjy.ebook.utils.CopyUtil;
+import com.wjy.ebook.utils.SnowFlake;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
@@ -23,8 +25,11 @@ public class EbookService {
 
     private static final Logger LOG = LoggerFactory.getLogger(EbookService.class);
 
-    @Resource
+    @Resource//spingboot自带注入
     private EbookMapper ebookMapper;
+
+    @Autowired//jdk自带注入
+    private SnowFlake snowFlake;
 
     /**
      * 查询接口
@@ -63,9 +68,18 @@ public class EbookService {
         Ebook ebook = CopyUtil.copy(req, Ebook.class);
         if (ObjectUtils.isEmpty(req.getId())) {
             //新增
+            ebook.setId(snowFlake.nextId());
+            ebookMapper.insert(ebook);
         }else {
             ebookMapper.updateByPrimaryKey(ebook);
         }
+    }
+
+    /**
+     * 删除接口
+     */
+    public void delete(Long id) {
+        ebookMapper.deleteByPrimaryKey(id);
     }
 
 
