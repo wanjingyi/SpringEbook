@@ -31,18 +31,33 @@
                             <a>Delete</a>
                         </a-popconfirm> -->
                         <a-space wrap>
-                            <a-button type="primary" @click="showModal">编辑</a-button>
-                            <a-button type="primary" danger @click="showModal">删除</a-button>
+                            <a-button type="primary" @click="handleEdit(record)">编辑</a-button>
+                            <a-button type="primary" danger>删除</a-button>
                         </a-space>
                     </template>
                 </template>
             </a-table>
         </a-layout-content>
 
-        <a-modal v-model:open="open" title="电子书表单" @ok="handleEidt">
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+        <a-modal v-model:open="open" title="电子书表单" @ok="handleOk">
+            <a-form :model="modalData"  name="nest-messages">
+                <a-form-item  label="封面">
+                    <a-input v-model:value="modalData.cover" />
+                </a-form-item>
+                <a-form-item  label="名称">
+                    <a-input v-model:value="modalData.name" />
+                </a-form-item>
+                <a-form-item  label="分类一">
+                    <a-input v-model:value="modalData.category1_id" />
+                </a-form-item>
+                <a-form-item  label="分类二">
+                    <a-input v-model:value="modalData.category2_id" />
+                </a-form-item>
+                <a-form-item  label="描述">
+                    <a-input v-model:value="modalData.description" />
+                </a-form-item>
+              
+            </a-form>
         </a-modal>
     </a-layout>
 </template>
@@ -115,17 +130,23 @@ export default defineComponent({
                 // slots: {customRender: 'action'}
             }
         ];
-
+         /**
+         * 模态框数据
+         */
+        const modalData = ref();
         const open = ref<boolean>(false);
 
-        const showModal = () => {
+        const handleEdit = (record : any) => {
+            console.log(record);
             open.value = true;
+            modalData.value = record;
         };
 
-        const handleEidt = (e: MouseEvent) => {
+        const handleOk = (e: MouseEvent) => {
             console.log(e);
             open.value = false;
         };
+
 
         const ebooks = ref();
 
@@ -170,9 +191,10 @@ export default defineComponent({
             loading,
             pagination,
             handleTableChange,
-            showModal,
-            handleEidt,
-            open
+            handleEdit,
+            handleOk,
+            open,
+            modalData
         }
     }
 });

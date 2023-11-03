@@ -1,0 +1,163 @@
+2023-10-30 16:58:52.607 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 19748 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-10-30 16:58:52.610 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-10-30 16:58:52.990 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: com/alibaba/fastjson/serializer/SerializeFilter
+2023-10-30 16:58:52.994 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-30 16:58:53.004 ERROR org.springframework.boot.SpringApplication        :818  [32m                  [0;39m Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: com/alibaba/fastjson/serializer/SerializeFilter
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.wjy.ebook.config.EbookApplication.main(EbookApplication.java:22)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: com/alibaba/fastjson/serializer/SerializeFilter
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:219)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 6 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: com/alibaba/fastjson/serializer/SerializeFilter
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:255)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 13 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/alibaba/fastjson/serializer/SerializeFilter
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3473)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2542)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.compiledByAjc(AbstractAspectJAdvisorFactory.java:95)
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.isAspect(AbstractAspectJAdvisorFactory.java:80)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:104)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:255)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 34 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.alibaba.fastjson.serializer.SerializeFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 46 common frames omitted
+2023-10-30 17:09:17.380 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.5.Final
+2023-10-30 17:09:17.394 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 30728 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-10-30 17:09:17.394 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-10-30 17:09:17.423 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-30 17:09:17.423 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-30 17:09:17.782 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-10-30 17:09:17.783 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-10-30 17:09:17.793 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-10-30 17:09:18.236 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2023-10-30 17:09:18.240 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2023-10-30 17:09:18.241 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-10-30 17:09:18.241 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-10-30 17:09:18.557 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-10-30 17:09:18.557 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1134 ms
+2023-10-30 17:09:19.335 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-10-30 17:09:19.347 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2023-10-30 17:09:19.359 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2023-10-30 17:09:19.365 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 2.224 seconds (JVM running for 2.819)
+2023-10-30 17:09:19.367 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-10-30 17:09:19.367 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8081
+2023-10-30 17:09:31.054 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-30 17:09:31.055 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-10-30 17:09:31.055 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2023-10-30 17:09:31.070 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-10-30 17:09:31.070 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://localhost:8081/demo/list GET
+2023-10-30 17:09:31.070 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.DemoController.list
+2023-10-30 17:09:31.071 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-30 17:09:31.093 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: []
+2023-10-30 17:09:31.119 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2023-10-30 17:09:31.295 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2023-10-30 17:09:31.300 DEBUG com.wjy.ebook.mapper.DemoMapper.selectByExample   :137  [32m                  [0;39m ==>  Preparing: select id, `name` from demo
+2023-10-30 17:09:31.314 DEBUG com.wjy.ebook.mapper.DemoMapper.selectByExample   :137  [32m                  [0;39m ==> Parameters: 
+2023-10-30 17:09:31.332 TRACE com.wjy.ebook.mapper.DemoMapper.selectByExample   :143  [32m                  [0;39m <==    Columns: id, name
+2023-10-30 17:09:31.333 TRACE com.wjy.ebook.mapper.DemoMapper.selectByExample   :143  [32m                  [0;39m <==        Row: 1, 测试
+2023-10-30 17:09:31.334 DEBUG com.wjy.ebook.mapper.DemoMapper.selectByExample   :137  [32m                  [0;39m <==      Total: 1
+2023-10-30 17:09:31.348 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: [{"id":1,"name":"测试"}]
+2023-10-30 17:09:31.348 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：279 ms -------------
+2023-10-30 17:09:38.060 INFO  com.wjy.ebook.aspect.LogAspect                    :46   [32m                  [0;39m ------------- 开始 -------------
+2023-10-30 17:09:38.060 INFO  com.wjy.ebook.aspect.LogAspect                    :47   [32m                  [0;39m 请求地址: http://localhost:8081/ebook/list GET
+2023-10-30 17:09:38.060 INFO  com.wjy.ebook.aspect.LogAspect                    :48   [32m                  [0;39m 类名方法: com.wjy.ebook.controller.EbookController.list
+2023-10-30 17:09:38.061 INFO  com.wjy.ebook.aspect.LogAspect                    :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2023-10-30 17:09:38.064 INFO  com.wjy.ebook.aspect.LogAspect                    :70   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2023-10-30 17:09:38.092 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2023-10-30 17:09:38.092 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m ==> Parameters: 
+2023-10-30 17:09:38.094 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==    Columns: count(0)
+2023-10-30 17:09:38.094 TRACE c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:143  [32m                  [0;39m <==        Row: 8
+2023-10-30 17:09:38.095 DEBUG c.w.ebook.mapper.EbookMapper.selectByExample_COUNT:137  [32m                  [0;39m <==      Total: 1
+2023-10-30 17:09:38.096 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2023-10-30 17:09:38.097 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2023-10-30 17:09:38.098 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2023-10-30 17:09:38.098 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础如门 Java 开发 ，企业级应用开发程序, /image/cover1.jpg, null, null, null
+2023-10-30 17:09:38.099 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 2, vue 入门教程, null, null, 零基础如门 vue 开发 ，企业级应用开发程序, /image/cover2.jpg, null, null, null
+2023-10-30 17:09:38.099 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 3, python 入门教程, null, null, 零基础如门 python 开发 ，企业级应用开发程序, /image/cover3.jpg, null, null, null
+2023-10-30 17:09:38.099 TRACE com.wjy.ebook.mapper.EbookMapper.selectByExample  :143  [32m                  [0;39m <==        Row: 4, mysql 入门教程, null, null, 零基础如门 mysql 开发 ，企业级应用开发程序, /image/cover4.jpg, null, null, null
+2023-10-30 17:09:38.099 DEBUG com.wjy.ebook.mapper.EbookMapper.selectByExample  :137  [32m                  [0;39m <==      Total: 4
+2023-10-30 17:09:38.100 INFO  com.wjy.ebook.service.EbookService                :39   [32m                  [0;39m 总行数:8
+2023-10-30 17:09:38.101 INFO  com.wjy.ebook.service.EbookService                :40   [32m                  [0;39m 总页数2
+2023-10-30 17:09:38.109 INFO  com.wjy.ebook.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.jpg","description":"零基础如门 Java 开发 ，企业级应用开发程序","id":1,"name":"Spring Boot 入门教程"},{"cover":"/image/cover2.jpg","description":"零基础如门 vue 开发 ，企业级应用开发程序","id":2,"name":"vue 入门教程"},{"cover":"/image/cover3.jpg","description":"零基础如门 python 开发 ，企业级应用开发程序","id":3,"name":"python 入门教程"},{"cover":"/image/cover4.jpg","description":"零基础如门 mysql 开发 ，企业级应用开发程序","id":4,"name":"mysql 入门教程"}],"total":8},"success":true}
+2023-10-30 17:09:38.109 INFO  com.wjy.ebook.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：49 ms -------------
+2023-10-30 17:19:44.435 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2023-10-30 17:19:44.439 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8081"]
+2023-10-30 17:19:44.439 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-10-30 17:19:44.440 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-30 17:19:44.441 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2023-10-30 17:19:44.442 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8081"]
+2023-10-30 17:19:44.443 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8081"]
+2023-10-30 17:19:44.452 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-10-30 17:19:44.458 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-10-30 17:19:44.510 INFO  com.wjy.ebook.config.EbookApplication             :55   [32m                  [0;39m Starting EbookApplication using Java 21.0.1 on wangjingyi with PID 30728 (D:\my_github_practice\SpringEbook\target\classes started by wangxi in D:\my_github_practice\SpringEbook)
+2023-10-30 17:19:44.510 INFO  com.wjy.ebook.config.EbookApplication             :632  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-10-30 17:19:44.592 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2023-10-30 17:19:44.592 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-10-30 17:19:44.593 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2023-10-30 17:19:44.672 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2023-10-30 17:19:44.672 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2023-10-30 17:19:44.672 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-10-30 17:19:44.672 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-10-30 17:19:44.680 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-10-30 17:19:44.680 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 168 ms
+2023-10-30 17:19:44.937 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-10-30 17:19:44.942 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2023-10-30 17:19:44.944 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2023-10-30 17:19:44.946 INFO  com.wjy.ebook.config.EbookApplication             :61   [32m                  [0;39m Started EbookApplication in 0.461 seconds (JVM running for 628.399)
+2023-10-30 17:19:44.947 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-10-30 17:19:44.947 INFO  com.wjy.ebook.config.EbookApplication             :23   [32m                  [0;39m 启动成功！！
+2023-10-30 17:19:44.948 INFO  com.wjy.ebook.config.EbookApplication             :24   [32m                  [0;39m 地址: 	http://127.0.0.1:8081
