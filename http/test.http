@@ -14,3 +14,12 @@ GET http://localhost:8086/ebook/list?page=1&size=101
 Accept: application/json
 
 ###
+
+GET http://localhost:8086/category/list
+Accept: application/json
+
+###
+GET http://localhost:8086/ebook/list?categoryId2=201
+Accept: application/json
+
+###

@@ -40,23 +40,35 @@ public class EbookService {
     public PageResp<EbookQueryResp> list(EbookQueryReq req) {
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
-
         if (!ObjectUtils.isEmpty(req.getName())) {
             criteria.andNameLike("%" + req.getName() + "%");
         }
-        PageHelper.startPage(req.getPage(),req.getSize());
+        if (!ObjectUtils.isEmpty(req.getCategoryId2())) {
+            criteria.andCategory2IdEqualTo(req.getCategoryId2());
+        }
+        PageHelper.startPage(req.getPage(), req.getSize());
         List<Ebook> ebookList = ebookMapper.selectByExample(ebookExample);
 
         PageInfo<Ebook> pageInfo = new PageInfo<>(ebookList);
-        LOG.info("总行数:{}", pageInfo.getTotal());
-        LOG.info("总页数{}", pageInfo.getPages());
+        LOG.info("总行数：{}", pageInfo.getTotal());
+        LOG.info("总页数：{}", pageInfo.getPages());
 
-        //列表数据
-        List<EbookQueryResp> respList = CopyUtil.copyList(ebookList, EbookQueryResp.class);
+        // List<EbookResp> respList = new ArrayList<>();
+        // for (Ebook ebook : ebookList) {
+        //     // EbookResp ebookResp = new EbookResp();
+        //     // BeanUtils.copyProperties(ebook, ebookResp);
+        //     // 对象复制
+        //     EbookResp ebookResp = CopyUtil.copy(ebook, EbookResp.class);
+        //
+        //     respList.add(ebookResp);
+        // }
+
+        // 列表复制
+        List<EbookQueryResp> list = CopyUtil.copyList(ebookList, EbookQueryResp.class);
 
         PageResp<EbookQueryResp> pageResp = new PageResp();
         pageResp.setTotal(pageInfo.getTotal());
-        pageResp.setList(respList);
+        pageResp.setList(list);
 
         return pageResp;
     }

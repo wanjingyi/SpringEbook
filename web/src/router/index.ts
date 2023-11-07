@@ -25,6 +25,15 @@ const routes: Array<RouteRecordRaw> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.----懒加载
     component: () => import(/* webpackChunkName: "about" */ '../views/admin/ebook.vue')
+  },
+  {
+    path: '/admin/category',
+    name: 'category',
+    // component: About
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.----懒加载
+    component: () => import(/* webpackChunkName: "about" */ '../views/admin/category.vue')
   }
 ]
 

@@ -1,47 +1,28 @@
 <template>
   <a-layout>
     <a-layout-sider width="200" style="background: #fff">
-      <a-menu mode="inline" :style="{ height: '100%', borderRight: 0 }">
-        <a-sub-menu key="sub1">
-          <template #title>
+      <a-menu mode="inline" @click="handleClick" :openKeys="openKeys">
+        <a-menu-item key="welcome">
+          <MailOutlined />
+          <span>欢迎</span>
+        </a-menu-item>
+        <a-sub-menu v-for="item in level1" :key="item.id">
+          <template v-slot:title>
             <span>
               <user-outlined />
-              subnav 111111
+              {{ item.name }}
             </span>
           </template>
-          <a-menu-item key="1">option1</a-menu-item>
-          <a-menu-item key="2">option2</a-menu-item>
-          <a-menu-item key="3">option3</a-menu-item>
-          <a-menu-item key="4">option4</a-menu-item>
-        </a-sub-menu>
-        <a-sub-menu key="sub2">
-          <template #title>
-            <span>
-              <laptop-outlined />
-              subnav 2
-            </span>
-          </template>
-          <a-menu-item key="5">option5</a-menu-item>
-          <a-menu-item key="6">option6</a-menu-item>
-          <a-menu-item key="7">option7</a-menu-item>
-          <a-menu-item key="8">option8</a-menu-item>
-        </a-sub-menu>
-        <a-sub-menu key="sub3">
-          <template #title>
-            <span>
-              <notification-outlined />
-              subnav 3
-            </span>
-          </template>
-          <a-menu-item key="9">option9</a-menu-item>
-          <a-menu-item key="10">option10</a-menu-item>
-          <a-menu-item key="11">option11</a-menu-item>
-          <a-menu-item key="12">option12</a-menu-item>
+          <a-menu-item v-for="child in item.children" :key="child.id">{{ child.name }}</a-menu-item>
         </a-sub-menu>
       </a-menu>
     </a-layout-sider>
     <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
-      <a-list item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }" :data-source="ebooks">
+      <div class="welcome" v-show="isShowWelcome">
+        <the-welcome></the-welcome>
+      </div>
+      <a-list v-show="!isShowWelcome" item-layout="vertical" size="large" :pagination="pagination"
+        :grid="{ gutter: 20, column: 3 }" :data-source="ebooks">
         <template #renderItem="{ item }">
           <a-list-item key="item.name">
             <template #actions>
@@ -66,23 +47,86 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 import axios from 'axios';
-
+import { Tool } from '@/util/tool';
+import { message } from 'ant-design-vue';
+import TheWelcome from '@/components/the-welcome.vue';
 
 
 export default defineComponent({
   name: 'HomeView',
+  components: {
+    TheWelcome
+  },
   setup() {
-    const listData: Record<string, string>[] = [];
-    
-    console.log("setup")
+    const openKeys = ref();
+
+    const isShowWelcome = ref(true);
+
+    let categoryId2 = 0;
+
+    const pagination = {
+      onChange: (page: number) => {
+        console.log(page);
+      },
+      pageSize: 3,
+    };
+
     const ebooks = ref();
-    onMounted(() => {
-      console.log("onMounted123")
-      axios.get("/ebook/list").then((response) => {
+
+    /**
+     * 查询电子书
+     */
+    const handleQueryEbook = () => {
+      axios.get("/ebook/list",{
+        params: {
+          page: 1,
+          size: 100,
+          categoryId2: categoryId2
+        }
+      }).then((response) => {
+        console.log(response,'111111');
         const data = response.data;
         ebooks.value = data.content.list
+      })
+    };
+
+    /**
+    * 数据查询
+    */
+    const level1 = ref();//一级分类数组
+    const category = ref();
+    const handleQuery = () => {
+      axios.get("/category/all").then((response) => {
+        const data = response.data;
+
+        if (data.success) {
+          category.value = data.content;
+
+          level1.value = [];
+
+          level1.value = Tool.array2Tree(category.value, 0);
+
+        } else {
+          message.error(data.message);
+        }
+
       });
-    })
+    };
+
+    const handleClick = (value: any) => {
+      if (value.key === 'welcome') {
+        isShowWelcome.value = true;
+      } else {
+        categoryId2 = value.key;
+        isShowWelcome.value = false;
+        handleQueryEbook();
+      }
+    };
+
+    onMounted(() => {
+      handleQuery();
+    });
+
 
     const actions: Record<string, string>[] = [
       { type: 'StarOutlined', text: '156' },
@@ -92,8 +136,12 @@ export default defineComponent({
 
     return {
       ebooks,
-      listData,
       actions,
+      level1,
+      openKeys,
+      handleClick,
+      isShowWelcome,
+      pagination
     }
   }
 });
